@@ -1,0 +1,227 @@
+/* Estilos generales */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bitter', serif;
+    color: #353E38;
+    background-color: #E9EAE9;
+}
+
+a, h2, p {
+    font-family: 'Bitter', serif;
+    color: #4F593F;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #4F593F;
+    text-align: center;
+}
+
+/* Estilos del encabezado */
+header {
+    position: relative;
+    text-align: center;
+    background-color: rgb(245,245,245);
+    color: #4F593F;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+}
+
+nav a {
+    margin: 0 10px;
+}
+
+/* Estilos de la imagen del encabezado */
+.header-image {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 500px;
+    /* Configura la imagen de portada aquí */
+    background: url(/img/articulo1.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4F593F;
+}
+
+.header-art2{
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 500px;
+    /* Configura la imagen de portada aquí */
+    background: url(/img/articulo2.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4F593F;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.header-art3{
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 500px;
+    /* Configura la imagen de portada aquí */
+    background: url(/img/articulo3.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4F593F;
+}
+
+.publicidad {
+    width: 100%;
+    max-width: calc(100% - 900px); /* 100% del ancho menos 20px de margen a la izquierda y 20px a la derecha */
+    margin: 0 auto; /* Centra horizontalmente */
+    overflow: hidden; /* Para evitar que la imagen se desborde del margen */
+}
+
+.publicidad-image {
+    width: 100%;
+    height: auto; /* Esto asegura que la altura se ajuste automáticamente proporcionalmente al ancho */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    margin: 0 auto; /* Centra horizontalmente la imagen dentro de su contenedor */
+}
+
+/* Centrar el iframe */
+
+.iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  
+
+.iframe-container {
+    max-width: 100%;
+    width: 80%; /* Puedes ajustar el ancho según tus preferencias */
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 para hacerlo responsive */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+}
+
+    
+/* Estilos del formulario de suscripción */
+
+.subscribe{
+    text-align: center;
+}
+.subscribe-form {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    width: 20%; /* Cambiar el ancho del campo de entrada para llenar el contenedor */
+    border: none;
+    font-family: 'Merriweather', serif;
+    color: #4F593F;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #4F593F;
+    color: #E9EAE9;
+    border: none;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+    margin-top: 10px;
+}
+
+/* Aumentar el tamaño de la letra en "Subscribirse al newsletter" */
+.subscribe h2 {
+    font-size: 23px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+    margin-bottom: 5px;
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+}
+
+
+
+
+/* Media Query para pantallas más pequeñas (ajusta los valores según tus necesidades) */
+@media screen and (max-width: 768px) {
+
+    .header-image h1 {
+        font-size: 120px; /* Reducir el tamaño del título en pantallas más pequeñas */
+    }
+    /* Ajusta los estilos para pantallas de hasta 768px de ancho */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        margin-top: 20px;
+    }
+
+    .publicidad {
+        max-width: 100%; /* Asegura que la publicidad ocupe el ancho completo */
+        padding: 0 0px; /* Agrega un espacio alrededor de la publicidad */
+        align-items: center;
+    }
+    .publicidad-image {
+        width: 100%; /* Asegura que la imagen de la publicidad sea responsive */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .subscribe-form {
+    display: flex;
+    flex-direction: column; /* Cambiar a disposición de columna en pantallas más pequeñas */
+    align-items: center; /* Centrar elementos horizontalmente */
+    }
+
+    .subscribe-form input[type="email"] {
+    width: 80%; /* Ancho del campo de entrada del 80% para llenar el contenedor */
+    margin-bottom: 10px; /* Agregar espacio entre el campo de entrada y el botón */
+    }
+
+    .subscribe-form button {
+    padding: 10px 20px;
+    min-width: 150px; /* Ancho mínimo para el botón */
+    }
+}
+
