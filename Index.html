@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Explora&family=Merriweather&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c0c14ddac0.js" crossorigin="anonymous"></script>
+    <script src="js/validators.js""></script>
 </head>
 
 <body>
@@ -159,18 +160,22 @@
     <section id="formulario" class="contacto">
         <div class="formulario">
             <h1>Formulario de Contacto</h1>
-            <form id="formularioContacto" action="https://formspree.io/f/xdovewak" method="POST">
+            <form id="formularioContacto" action="https://formspree.io/f/xdovewak" method="POST" onsubmit="return formValidator()">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br><br>
+                <input type="text" id="nombre" name="nombre" >
+                <span id="errorNombre" class="error" ></span><br><br>
 
                 <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required><br><br>
+                <input type="text" id="apellido" name="apellido" >
+                <span id="errorApellido" class="error"></span><br><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="text" id="email" name="email" >
+                <span id="errorEmail" class="error"></span><br><br>
 
                 <label for="consultas">Consultas:</label><br>
-                <textarea id="consultas" name="consultas" rows="4" cols="50"></textarea><br><br>
+                <textarea id="consultas" name="consultas" rows="4" cols="50"></textarea>
+                <span id="errorConsultas" class="error"></span><br><br>
 
                 <input type="submit" value="Enviar">
         </div>
